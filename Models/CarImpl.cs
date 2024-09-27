@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AvinashChowdaryBodduluri_Assignment2.Models
 {
-    internal class CarImpl : ICar
+    internal class CarImpl : ICar, IDriveable
     {
         public int Doors { get; set; }
-        public string Brand { get; set; }
-        public string Model { get; set; }
+        public required string Brand { get; set; }
+        public required string Model { get; set; }
         public int Year { get; set; }
         public double Mileage { get; set; }
 
