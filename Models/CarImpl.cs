@@ -47,11 +47,13 @@ namespace AvinashChowdaryBodduluri_Assignment2.Models
         public void StartEngine()
         {
             engineOn = true;
+            Console.WriteLine("Engine Started.");
         }
 
         public void StopEngine()
         {
             engineOn = false;
+            Console.WriteLine("Engine turned off.");
 
         }
         public override string ToString()
