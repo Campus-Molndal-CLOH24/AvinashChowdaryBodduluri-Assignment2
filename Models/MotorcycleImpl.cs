@@ -1,17 +1,11 @@
-﻿using AvinashChowdaryBodduluri_Assignment2.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AvinashChowdaryBodduluri_Assignment2.Models
+﻿namespace AvinashChowdaryBodduluri_Assignment2.Models
 {
-    internal class MotorcycleImpl : IMotorcycle, IDriveable
+    using AvinashChowdaryBodduluri_Assignment2.Interfaces;
+    public class MotorcycleImpl : IMotorcycle, IDriveable
     {
-        public required string EngineType { get; set; }
-        public required string Brand { get; set; }
-        public required string Model { get; set; }
+        public string EngineType { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
         public int Year { get; set; }
         public double Mileage { get; set; }
 
@@ -34,13 +28,13 @@ namespace AvinashChowdaryBodduluri_Assignment2.Models
         public void StartEngine()
         {
             EngineOn = true;
-            Console.WriteLine("Engine Started.");
+            Console.WriteLine("Motorcyle Engine Started.");
         }
 
         public void StopEngine()
         {
             EngineOn = false;
-            Console.WriteLine("Engine turned off.");
+            Console.WriteLine("Motorcycle Engine turned off.");
         }
 
         public string Drive()

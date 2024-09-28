@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AvinashChowdaryBodduluri_Assignment2.Models
 {
-    internal class CarImpl : ICar, IDriveable
+    public class CarImpl : ICar, IDriveable
     {
         public int Doors { get; set; }
-        public required string Brand { get; set; }
-        public required string Model { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
         public int Year { get; set; }
         public double Mileage { get; set; }
 
@@ -47,13 +47,13 @@ namespace AvinashChowdaryBodduluri_Assignment2.Models
         public void StartEngine()
         {
             engineOn = true;
-            Console.WriteLine("Engine Started.");
+            Console.WriteLine("Car Engine Started.");
         }
 
         public void StopEngine()
         {
             engineOn = false;
-            Console.WriteLine("Engine turned off.");
+            Console.WriteLine("Car Engine turned off.");
 
         }
         public override string ToString()

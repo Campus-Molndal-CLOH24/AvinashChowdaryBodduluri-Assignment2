@@ -1,5 +1,6 @@
 ﻿namespace AvinashChowdaryBodduluri_Assignment2.Interfaces
 {
+    using AvinashChowdaryBodduluri_Assignment2.Factories;
     public interface IVehicle
     {
         string Brand { get; set; }
