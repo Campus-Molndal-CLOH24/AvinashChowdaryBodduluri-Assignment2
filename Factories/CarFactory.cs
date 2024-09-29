@@ -19,12 +19,12 @@
             this.mileage = mileage;
             this.doors = doors;
         }
-
+        //Implementing the CreateVehicle method from the IVehicleFactory interface as required.
         public IVehicle CreateVehicle()
         {
             return CreateCar();
         }
-
+        //Implementing the CreateCar method to create a new CarImpl object as per assignment.
         public CarImpl CreateCar()
         {
             return new CarImpl(brand, model, year, mileage, doors);

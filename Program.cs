@@ -4,6 +4,7 @@
     using AvinashChowdaryBodduluri_Assignment2.Factories;
     using AvinashChowdaryBodduluri_Assignment2.Models;
     using System.Security.Cryptography.X509Certificates;
+    using System.ComponentModel;
 
     internal class Program
     {
@@ -19,6 +20,7 @@
             CarFactory car3 = new CarFactory("Honda", "Civic", 2016, 25000, 4);
             MotorcycleFactory motorcycle3 = new MotorcycleFactory("Suzuki", "GSX-R1000", 2015, 15000, "Inline-4");
 
+            //Adding vehicles to List
             vehicles.Add(car1.CreateCar());
             vehicles.Add(motorcycle1.CreateMotorcycle());
             vehicles.Add(car2.CreateCar());
@@ -37,6 +39,7 @@
                 }
                 if(vehicle is IDriveable driveable)
                 {
+                    //Execute Drive method based on the vehicle type
                     Console.WriteLine(driveable.Drive());
                 }
                 vehicle.StopEngine();

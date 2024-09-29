@@ -19,12 +19,12 @@ namespace AvinashChowdaryBodduluri_Assignment2.Factories
             this.mileage = mileage;
             this.engineType = engineType;
         }
-
+        //Implementing the CreateVehicle method from the IVehicleFactory interface as required.
         public IVehicle CreateVehicle()
         {
             return CreateMotorcycle();
         }
-
+        //Implementing the CreateCar method to create a new CarImpl object as per assignment.
         public MotorcycleImpl CreateMotorcycle()
         {
             return new MotorcycleImpl(brand, model, year, mileage, engineType);
