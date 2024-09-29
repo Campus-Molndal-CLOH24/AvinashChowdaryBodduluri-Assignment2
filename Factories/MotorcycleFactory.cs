@@ -5,13 +5,27 @@ namespace AvinashChowdaryBodduluri_Assignment2.Factories
 {
     public class MotorcycleFactory : IVehicleFactory
     {
-        public IVehicle CreateVehicle(string brand, string model, int year, double mileage)
+        private string brand { get; set; }
+        private string model { get; set; }
+        private int year { get; set; }
+        private double mileage { get; set; }
+        private string engineType { get; set; }
+
+        public MotorcycleFactory(string brand, string model, int year, double mileage, string engineType)
         {
-            string engineType = "unknown";
-            return new MotorcycleImpl(brand, model, year, mileage, engineType);
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+            this.mileage = mileage;
+            this.engineType = engineType;
         }
 
-        public MotorcycleImpl CreateMotorcycle(string brand, string model, int year, double mileage, string engineType)
+        public IVehicle CreateVehicle()
+        {
+            return CreateMotorcycle();
+        }
+
+        public MotorcycleImpl CreateMotorcycle()
         {
             return new MotorcycleImpl(brand, model, year, mileage, engineType);
         }

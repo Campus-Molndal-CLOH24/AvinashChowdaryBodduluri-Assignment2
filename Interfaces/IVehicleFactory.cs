@@ -3,6 +3,6 @@
 
     public interface IVehicleFactory
     {
-        IVehicle CreateVehicle(string brand, string model, int year, double mileage);
+        IVehicle CreateVehicle();
     }
 }
