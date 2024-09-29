@@ -21,13 +21,14 @@
             CarFactory car3 = new CarFactory("Honda", "Civic", 2016, 25000, 4);
             MotorcycleFactory motorcycle3 = new MotorcycleFactory("Suzuki", "GSX-R1000", 2015, 15000, "Inline-4");
 
+
             //Adding vehicles to List
-            vehicles.Add(car1.CreateCar());
-            vehicles.Add(motorcycle1.CreateMotorcycle());
-            vehicles.Add(car2.CreateCar());
-            vehicles.Add(motorcycle2.CreateMotorcycle());
-            vehicles.Add(car3.CreateCar());
-            vehicles.Add(motorcycle3.CreateMotorcycle());
+            vehicles.Add(car1.CreateVehicle());
+            vehicles.Add(motorcycle1.CreateVehicle());
+            vehicles.Add(car2.CreateVehicle());
+            vehicles.Add(motorcycle2.CreateVehicle());
+            vehicles.Add(car3.CreateVehicle());
+            vehicles.Add(motorcycle3.CreateVehicle());
 
 
             foreach (IVehicle vehicle in vehicles)
