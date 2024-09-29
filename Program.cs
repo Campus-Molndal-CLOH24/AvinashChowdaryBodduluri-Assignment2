@@ -10,6 +10,7 @@
     {
         static void Main()
         {
+            // Create a list of IVehicle objects    
             List<IVehicle> vehicles = new List<IVehicle>();
 
             // Instantiate the specific factories
@@ -43,8 +44,9 @@
                     Console.WriteLine(driveable.Drive());
                 }
                 vehicle.StopEngine();
+                Console.WriteLine();
             }
-
+            //This is to keep the console window open until a key is pressed.
             Console.ReadKey();
         }
     }
