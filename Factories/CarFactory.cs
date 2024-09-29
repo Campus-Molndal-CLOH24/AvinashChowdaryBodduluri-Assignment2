@@ -5,13 +5,22 @@
 
     public class CarFactory : IVehicleFactory
     {
-        public IVehicle CreateVehicle(string brand, string model, int year, double mileage)
-        {
-            int doors = 4;
-            return new CarImpl(brand, model, year, mileage, doors);
-        }
+        private string brand;
+        private string model;
+        private int year;
+        private double mileage;
+        private int doors;
 
-        public CarImpl CreateCar(string brand, string model, int year, double mileage, int doors)
+        public CarFactory(string brand, string model, int year, double mileage, int doors)
+        {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+            this.mileage = mileage;
+            this.doors = doors;
+        }   
+
+        public IVehicle CreateVehicle()
         {
             return new CarImpl(brand, model, year, mileage, doors);
         }

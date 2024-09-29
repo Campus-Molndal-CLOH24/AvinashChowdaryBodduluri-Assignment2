@@ -31,7 +31,8 @@ namespace AvinashChowdaryBodduluri_Assignment2.Models
         {
             if(engineOn)
             {
-                return "Car is Driveable & Ready for ride.";
+                Mileage += 10;
+                return "Car is Driveable & Ready for ride. Driven 10 Miles";
             }
             else
             {
