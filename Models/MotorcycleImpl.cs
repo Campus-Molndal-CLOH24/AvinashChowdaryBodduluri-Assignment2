@@ -41,7 +41,8 @@
         {
             if (EngineOn)
             {
-                return "Motorcycle is Driveable & Ready for ride.";
+                Mileage += 5;
+                return "Motorcycle is Driveable & Ready for ride. Went on for ride of 5 Miles.";
             }
             else
             {
