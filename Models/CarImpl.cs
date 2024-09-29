@@ -31,6 +31,7 @@ namespace AvinashChowdaryBodduluri_Assignment2.Models
         {
             if(engineOn)
             {
+                //Increase the mileage by 10 miles when called the Drive method.
                 Mileage += 10;
                 return "Car is Driveable & Ready for ride. Went for a ride of 10 Miles.";
             }
